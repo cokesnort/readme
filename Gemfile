@@ -13,6 +13,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'puma'
 gem 'quiet_assets'
+gem 'simple_form'
 
 group :development, :test do
   gem 'pry'
