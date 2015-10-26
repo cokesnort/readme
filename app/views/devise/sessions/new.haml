@@ -1,0 +1,14 @@
+.page-header.text-center
+  %h2= t(:sign_in)
+.col-md-offset-4.col-md-4.col-sm-offset-3.col-sm-6.col-xs-10.col-xs-offset-1
+  = simple_form_for(resource, as: resource_name, url: user_session_path, wrapper: :horizontal_form, html: { class: 'form-horizontal' }) do |f|
+    = devise_error_messages!
+    = f.input :email, as: :email, input_html: { autofocus: true }
+    = f.input :password, input_html: { autocomplete: 'off' }
+
+    .form-group
+      
+      = f.submit t(:sign_in), class: 'form-control btn btn-primary'
+
+    .form-group.text-center
+      = render "devise/shared/links"

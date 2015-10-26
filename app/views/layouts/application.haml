@@ -5,6 +5,7 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
     = content_for(:head)
+    %title Read.me
     %meta{charset: 'utf-8'}
     %meta{content: 'IE=edge', 'http-equiv' => 'X-UA-Compatible'}
     %meta{content: 'width=device-width, initial-scale=1', name: 'viewport'}
@@ -24,6 +25,14 @@
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
-              %a{href: root_path} Home
+              = link_to 'Home', root_path
+            %li= link_to 'Another place', '#'
+          %ul.nav.navbar-nav.navbar-right
+            - if current_user.present?
+              = render 'shared/user_dropdown'
+            - else
+              %li= link_to 'Sign in', new_user_session_path
+
     .container
-      = yield        
+      = render 'shared/flash_messages'
+      = yield
