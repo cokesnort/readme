@@ -14,8 +14,12 @@ gem 'haml-rails'
 gem 'puma'
 gem 'quiet_assets'
 gem 'simple_form'
+gem 'carrierwave'
 
 group :development, :test do
+  gem 'faker'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
   gem 'pry'
   gem 'byebug'
   gem 'rspec-rails'
@@ -25,4 +29,3 @@ group :development do
   gem 'web-console'
   gem 'spring'
 end
-
