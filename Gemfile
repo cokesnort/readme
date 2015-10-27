@@ -15,6 +15,8 @@ gem 'puma'
 gem 'quiet_assets'
 gem 'simple_form'
 gem 'carrierwave'
+gem 'mini_magick'
+gem 'activeadmin', '~> 1.0.0.pre2'
 
 group :development, :test do
   gem 'faker'
