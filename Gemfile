@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'activeadmin', '~> 1.0.0.pre2'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'faker'
@@ -25,9 +26,10 @@ group :development, :test do
   gem 'pry'
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'spring-commands-rspec'
+  gem 'spring'
 end
 
 group :development do
   gem 'web-console'
-  gem 'spring'
 end
