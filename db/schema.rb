@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027202437) do
+ActiveRecord::Schema.define(version: 20151028205719) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20151027202437) do
     t.string   "author_type", null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "middle_name"
   end
 
   add_index "authors", ["author_type"], name: "index_authors_on_author_type"
